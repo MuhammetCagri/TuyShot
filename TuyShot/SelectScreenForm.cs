@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TuyShot.Options;
@@ -13,7 +14,7 @@ using TuyShot.Options.PictureBoxOptions;
 
 namespace TuyShot
 {
-    public partial class Form1 : Form
+    public partial class SelectScreenForm : Form
     {
 
         private PenOptions _penOptions = new PenOptions();
@@ -22,39 +23,41 @@ namespace TuyShot
         private DialogResult _dialogResult = new DialogResult();
         private Rectangle _rectangle = new Rectangle();
         private Brush _selectionBrush = new SolidBrush(Color.FromArgb(128, 72, 145, 220));
-        Bitmap _image;
+        Image _image;
 
 
-        public Form1()
+        public SelectScreenForm()
         {
             InitializeComponent();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Image image = new Bitmap(@"C:\Users\muham\Desktop\deneme.png");
-
-            this.BackgroundImage = image;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = TakeScreenShoot();
+            pictureBox1.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox1.Image = TakeScreenShoot();
+        }
+
+        private Image TakeScreenShoot()
+        {
             this.Hide();
-            _image = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-            Graphics graphics = Graphics.FromImage(_image);
-            graphics.CopyFromScreen(0, 0, 0, 0, new Size(_image.Width, _image.Height));
-            pictureBox1.Image = _image;
-            graphics.Dispose();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Thread.Sleep(300);
+            SendKeys.Send("{PRTSC}");//Uygulamayı PrintScreen tuşuna bastıralım
+            Image image = Clipboard.GetImage();
+            _image = image;
             this.Show();
+            return _image;
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             _pictureBoxOption.IsSelectedScreenActive = true;
             _pictureBoxOption.StartCoordinat = e.Location;
-
-
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -73,10 +76,7 @@ namespace TuyShot
                 );
                 _pictureBoxOption.Coordinat = _rectangle.Location;
                 _pictureBoxOption.Size = _rectangle.Size;
-                //_pictureBox.SetBounds(_pictureBoxOption.Coordinat.X, _pictureBoxOption.Coordinat.Y, _pictureBoxOption.Size.Width, _pictureBoxOption.Size.Height);
-                //this.Controls.Add(_pictureBox);
-                pictureBox1.Invalidate();
-
+                pictureBox1.Image = _image;
             }
 
         }
@@ -85,7 +85,9 @@ namespace TuyShot
         {
             if (_pictureBoxOption.IsSelectedScreenActive == true && _rectangle != null && _rectangle.Width > 0 && _rectangle.Height > 0)
             {
-                e.Graphics.FillRectangle(_selectionBrush, _rectangle);
+                //e.Graphics.FillRectangle(_selectionBrush, _rectangle);
+                Pen pen = new Pen(Color.Red,3);
+                e.Graphics.DrawRectangle(pen, _rectangle);
                 //_pictureBoxOption.IsSelectedScreenActive = false;
             }
         }
@@ -93,7 +95,7 @@ namespace TuyShot
         private Bitmap ResizeImage()
         {
             if (_pictureBoxOption.Size.Width <= 0 || _pictureBoxOption.Size.Height <= 0)
-                return _image;
+                return null;
             Bitmap matbmp = new Bitmap(_pictureBoxOption.Size.Width, _pictureBoxOption.Size.Height);
             //Graphics sınıfıylada koordinatları verien resmimizi X= 0 ,Y= 0 koordinat eksenınden baslatarak ciziyoruz.
             Graphics grafikmat = Graphics.FromImage(matbmp);
@@ -104,9 +106,12 @@ namespace TuyShot
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            ScreenShotForm frm = new ScreenShotForm(ResizeImage());
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            EditPanelForm frm = new EditPanelForm(ResizeImage());
             _pictureBoxOption.IsSelectedScreenActive = false;
             frm.Show();
+            this.Close();
         }
+
     }
 }

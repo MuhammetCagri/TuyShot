@@ -10,18 +10,23 @@ using System.Windows.Forms;
 
 namespace TuyShot
 {
-    public partial class ScreenShotForm : Form
+    public partial class ControlPanelForm : Form
     {
-        Bitmap _image;
-        public ScreenShotForm(Bitmap image)
+        public ControlPanelForm()
         {
             InitializeComponent();
-            _image = image;
         }
 
         private void ScreenShotForm_Load(object sender, EventArgs e)
         {
-            pictureBoxScreen.Image = _image;
+
+        }
+
+        private void btnTake_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SelectScreenForm frm = new SelectScreenForm();
+            frm.Show();
         }
     }
 }

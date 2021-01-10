@@ -1,7 +1,7 @@
 ﻿
 namespace TuyShot
 {
-    partial class Form1
+    partial class SelectScreenForm
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -29,7 +29,7 @@ namespace TuyShot
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectScreenForm));
             this.btnStart = new System.Windows.Forms.Button();
             this.chkRectangle = new System.Windows.Forms.CheckBox();
             this.chkLine = new System.Windows.Forms.CheckBox();
@@ -68,6 +68,7 @@ namespace TuyShot
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
@@ -76,7 +77,7 @@ namespace TuyShot
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
-            // Form1
+            // SelectScreenForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +85,7 @@ namespace TuyShot
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.grpBoxOptions);
             this.DoubleBuffered = true;
-            this.Name = "Form1";
+            this.Name = "SelectScreenForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpBoxOptions.ResumeLayout(false);

@@ -123,10 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 390</value>
+    <value>211, 317</value>
+  </data>
+  <data name="btnStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 27</value>
+    <value>68, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
@@ -154,10 +157,13 @@
     <value>NoControl</value>
   </data>
   <data name="chkRectangle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 30</value>
+    <value>11, 24</value>
+  </data>
+  <data name="chkRectangle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="chkRectangle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 21</value>
+    <value>48, 17</value>
   </data>
   <data name="chkRectangle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -184,10 +190,13 @@
     <value>NoControl</value>
   </data>
   <data name="chkLine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 57</value>
+    <value>11, 46</value>
+  </data>
+  <data name="chkLine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="chkLine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 21</value>
+    <value>48, 17</value>
   </data>
   <data name="chkLine.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -208,10 +217,16 @@
     <value>0</value>
   </data>
   <data name="grpBoxOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 147</value>
+    <value>358, 119</value>
+  </data>
+  <data name="grpBoxOptions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="grpBoxOptions.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="grpBoxOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 97</value>
+    <value>87, 79</value>
   </data>
   <data name="grpBoxOptions.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -237,11 +252,14 @@
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>1322, 587</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+    <value>CenterImage</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -262,10 +280,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>1322, 587</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -274,7 +295,7 @@
     <value>Form1</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
+    <value>SelectScreenForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
