@@ -23,7 +23,7 @@ namespace TuyShot
         private DialogResult _dialogResult = new DialogResult();
         private Rectangle _rectangle = new Rectangle();
         private Brush _selectionBrush = new SolidBrush(Color.FromArgb(128, 72, 145, 220));
-        Image _image;
+        public Image _image;
 
 
         public SelectScreenForm()
