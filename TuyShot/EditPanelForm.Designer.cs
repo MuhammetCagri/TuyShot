@@ -44,17 +44,18 @@ namespace TuyShot
             this.ortaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kalınToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEdit)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxEdit
             // 
-            this.pictureBoxEdit.Location = new System.Drawing.Point(12, 30);
+            this.pictureBoxEdit.Location = new System.Drawing.Point(15, 38);
+            this.pictureBoxEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxEdit.Name = "pictureBoxEdit";
-            this.pictureBoxEdit.Size = new System.Drawing.Size(1419, 680);
+            this.pictureBoxEdit.Size = new System.Drawing.Size(1774, 850);
             this.pictureBoxEdit.TabIndex = 1;
             this.pictureBoxEdit.TabStop = false;
             this.pictureBoxEdit.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxEdit_Paint);
@@ -74,7 +75,7 @@ namespace TuyShot
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1443, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1804, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -84,7 +85,7 @@ namespace TuyShot
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -103,27 +104,27 @@ namespace TuyShot
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(36, 24);
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(39, 24);
             this.toolStripSplitButton1.Text = "toolStripSplitButton1";
             this.toolStripSplitButton1.ButtonClick += new System.EventHandler(this.toolStripSplitButton1_ButtonClick);
             // 
             // inceToolStripMenuItem
             // 
             this.inceToolStripMenuItem.Name = "inceToolStripMenuItem";
-            this.inceToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.inceToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.inceToolStripMenuItem.Text = "İnce";
             this.inceToolStripMenuItem.Click += new System.EventHandler(this.inceToolStripMenuItem_Click);
             // 
             // ortaToolStripMenuItem
             // 
             this.ortaToolStripMenuItem.Name = "ortaToolStripMenuItem";
-            this.ortaToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.ortaToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.ortaToolStripMenuItem.Text = "Orta";
             // 
             // kalınToolStripMenuItem
             // 
             this.kalınToolStripMenuItem.Name = "kalınToolStripMenuItem";
-            this.kalınToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.kalınToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.kalınToolStripMenuItem.Text = "Kalın";
             // 
             // toolStripSplitButton2
@@ -136,26 +137,26 @@ namespace TuyShot
             this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
             this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(36, 24);
+            this.toolStripSplitButton2.Size = new System.Drawing.Size(39, 24);
             this.toolStripSplitButton2.Text = "toolStripSplitButton2";
             this.toolStripSplitButton2.ButtonClick += new System.EventHandler(this.toolStripSplitButton2_ButtonClick);
             // 
             // inceToolStripMenuItem1
             // 
             this.inceToolStripMenuItem1.Name = "inceToolStripMenuItem1";
-            this.inceToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.inceToolStripMenuItem1.Size = new System.Drawing.Size(125, 26);
             this.inceToolStripMenuItem1.Text = "İnce";
             // 
             // ortaToolStripMenuItem1
             // 
             this.ortaToolStripMenuItem1.Name = "ortaToolStripMenuItem1";
-            this.ortaToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.ortaToolStripMenuItem1.Size = new System.Drawing.Size(125, 26);
             this.ortaToolStripMenuItem1.Text = "Orta";
             // 
             // kalınToolStripMenuItem1
             // 
             this.kalınToolStripMenuItem1.Name = "kalınToolStripMenuItem1";
-            this.kalınToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.kalınToolStripMenuItem1.Size = new System.Drawing.Size(125, 26);
             this.kalınToolStripMenuItem1.Text = "Kalın";
             // 
             // toolStripButton2
@@ -164,14 +165,9 @@ namespace TuyShot
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
             // 
             // toolStripButton3
             // 
@@ -179,20 +175,26 @@ namespace TuyShot
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton3.Text = "toolStripButton3";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // EditPanelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1443, 720);
+            this.ClientSize = new System.Drawing.Size(1804, 900);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBoxEdit);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditPanelForm";
-            this.Text = "EditPanelForm";
+            this.Text = "Düzenleme";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditPanelForm_FormClosed);
             this.Load += new System.EventHandler(this.EditPanelForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEdit)).EndInit();
